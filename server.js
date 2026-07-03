@@ -243,12 +243,5 @@ app.get("/api/status", (req, res) => {
   });
 });
 
-
-app.get("/api/debug-live", async (req, res) => {
-  if (req.query.secret !== SHARED_SECRET) return res.status(401).end();
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${YOUTUBE_API_KEY}`;
-  const r = await fetch(url);
-  const data = await r.json();
-  res.json(data);
-});const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
