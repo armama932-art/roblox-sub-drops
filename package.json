@@ -1,0 +1,16 @@
+{
+  "name": "roblox-sub-drops-backend",
+  "version": "1.0.0",
+  "description": "Polls YouTube subscriber count and exposes an endpoint for a Roblox game to consume",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
